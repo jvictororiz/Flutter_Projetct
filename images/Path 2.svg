@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="137px" height="202px" viewBox="0 0 137 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E188EF" offset="0%"></stop>
+            <stop stop-color="#C050DA" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="137" height="202" rx="8"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#EAA6F4" offset="0%"></stop>
+            <stop stop-color="#D16DE5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Simulação" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ocupação" transform="translate(-34.000000, -559.000000)">
+            <g id="Path-2" transform="translate(34.000000, 559.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <path d="M78.7928949,203 C35.4595615,186.818957 18.4595615,155.356455 27.7928949,108.612494 C37.1262282,61.8685324 28.1262282,25.6643678 0.792894864,0 L-8,213.388474 L78.7928949,203 Z" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
