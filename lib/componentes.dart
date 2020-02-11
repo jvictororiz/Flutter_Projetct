@@ -147,7 +147,8 @@ class Activity extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(),
+        theme: ThemeData(
+        ),
         home: Scaffold(
             appBar: AppBar(
               elevation: 0,
