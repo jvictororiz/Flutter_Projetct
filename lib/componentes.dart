@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 class ButtonRound extends StatelessWidget {
@@ -9,7 +11,12 @@ class ButtonRound extends StatelessWidget {
   final LinearGradient gradientColor;
 
   const ButtonRound(
-      {Key key, this.text, this.backgroundColor, this.textColor, this.click, this.gradientColor})
+      {Key key,
+      this.text,
+      this.backgroundColor,
+      this.textColor,
+      this.click,
+      this.gradientColor})
       : super(key: key);
 
   @override
@@ -22,7 +29,9 @@ class ButtonRound extends StatelessWidget {
         elevation: 3,
         color: backgroundColor,
         child: Container(
-          decoration: BoxDecoration(gradient: gradientColor, borderRadius:BorderRadius.circular(radius)  ),
+          decoration: BoxDecoration(
+              gradient: gradientColor,
+              borderRadius: BorderRadius.circular(radius)),
           child: InkWell(
             onTap: click,
             borderRadius: BorderRadius.circular(radius),
@@ -32,7 +41,9 @@ class ButtonRound extends StatelessWidget {
                 child: Text(
                   text,
                   style: TextStyle(
-                      color: textColor, fontSize: 15, fontWeight: FontWeight.bold),
+                      color: textColor,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -147,8 +158,7 @@ class Activity extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-        ),
+        theme: ThemeData(),
         home: Scaffold(
             appBar: AppBar(
               elevation: 0,
@@ -194,39 +204,40 @@ class _InputTextMaskState extends State<InputTextMask> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      textDirection: TextDirection.rtl,
+      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
-        Expanded(
-          flex: 4,
+        Container(
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(45),
+              color: Color(0xff5BE6BF)),
+          child: InkWell(
+            onTap: click,
+            borderRadius: BorderRadius.circular(45),
+            child: Center(
+              child: Icon(
+                Icons.keyboard_arrow_right,
+                color: Colors.white,
+                size: 40,
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 22,
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width - 50,
           child: TextField(
+            keyboardType: TextInputType.phone,
+            controller: controller,
             style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
                 color: Color(0xff5BE6BF)),
             decoration: InputDecoration(hintText: hint),
-          ),
-        ),
-        SizedBox(
-          width: 12,
-        ),
-        Expanded(
-          flex: 1,
-          child: InkWell(
-            onTap: click,
-            borderRadius: BorderRadius.circular(45),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Color(0xff5BE6BF),
-                  borderRadius: BorderRadius.circular(45)),
-              height: 70,
-
-              child: Center(
-                child: Icon(
-                  Icons.keyboard_arrow_right,
-                  color: Colors.white,
-                  size: 40,
-                ),
-              ),
-            ),
           ),
         ),
       ],

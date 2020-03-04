@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => SimulationPage()));
-                            },
+                              },
                           ),
                           SizedBox(
                             height: 20,

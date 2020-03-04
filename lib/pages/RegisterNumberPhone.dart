@@ -29,9 +29,14 @@ class RegisterPhoneNumber extends StatelessWidget {
                       fontSize: 34,
                       fontWeight: FontWeight.bold)),
               SizedBox(height: 60),
-              InputTextMask(hint:"Digite seu número",mask: "(00) 0000-0000",click: (){
-                Navigator.push(context, CupertinoPageRoute(builder: (context)=>SuccessPhone()));
-              },)
+              InputTextMask(
+                hint: "Digite seu número",
+                mask: "(00) 00000-0000",
+                click: () {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => SuccessPhone()));
+                },
+              )
             ],
           ),
         ),
